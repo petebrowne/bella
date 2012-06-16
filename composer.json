@@ -16,5 +16,7 @@
   "require": {
     "php": ">= 5.2.13"
   },
-  "include-path": ["bella/"]
+  "autoload": {
+    "psr-0": {"Bella": "src/"}
+  }
 }

@@ -14,12 +14,12 @@ The best place to check out examples is in the unit tests (bella/tests).
 
 ### Simple Query
 
-	$users = new Table('users');
+	$users = new Bella_Table('users');
 	echo  $users->project('*')->to_sql();
 
 	// Result: SELECT * FROM users
 
-	$users = new Table('users');
+	$users = new Bella_Table('users');
 	$query = $users->where($users['name']->eq('bob')->otherwise($users['age']->lt(25)));
 
 // Result: SELECT FROM users WHERE (name = 'bob' OR age < 25)
